@@ -25,4 +25,4 @@ def tocar_musica(musica):
     time.sleep(3)
 
     # Clicar no play
-    pyautogui.click(x=1055, y=319)
+    pyautogui.click(x=1151, y=269)
