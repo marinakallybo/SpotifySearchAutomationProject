@@ -1,53 +1,41 @@
 # SpotifySearchAutomationProject 🎵
 
-A simple Python automation project that opens Spotify, searches for a song, and starts playback automatically.
+A simple Python automation that opens Spotify, searches for a song, and starts playing it automatically.
 
-This project was created as a practical way to automate a repetitive process while practicing Python automation and GUI development.
+Built as a small personal project to automate a repetitive task and practice Python automation.
+
+## Preview
+
+Type the song name → Open Spotify → Search → Play 🎶
 
 ## Features
 
-* Opens Spotify automatically
-* Searches for any song typed by the user
-* Starts music playback
-* Simple graphical interface built with CustomTkinter
+✅ Open Spotify automatically
+✅ Search for any song typed by the user
+✅ Start playback automatically
+✅ Simple GUI built with CustomTkinter
 
-## Technologies Used
+## Technologies
 
 * Python
 * PyAutoGUI
 * CustomTkinter
-* Time
-
-## How It Works
-
-1. The user types the name of a song in the interface.
-2. The application opens Spotify automatically.
-3. The song name is searched.
-4. Playback starts automatically.
 
 ## Installation
 
-Clone this repository:
+Clone the repository:
 
 ```bash
 git clone https://github.com/your-username/SpotifySearchAutomationProject.git
 ```
 
-Navigate to the project folder:
-
-```bash
-cd SpotifySearchAutomationProject
-```
-
-Install the dependencies:
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Running the Project
-
-Run the interface file:
+Run the project:
 
 ```bash
 python interface.py
@@ -57,27 +45,18 @@ python interface.py
 
 ```text
 SpotifySearchAutomationProject/
-│── main.py          # Spotify automation logic
-│── interface.py     # Graphical interface
-│── requirements.txt # Dependencies
+│── main.py
+│── interface.py
+│── requirements.txt
 │── README.md
 ```
 
-## Important Notes
+## Notes
 
-This project uses screen automation with PyAutoGUI, so:
+This project uses screen automation (`PyAutoGUI`), so Spotify must be installed and open correctly on your computer.
 
-* Spotify must be installed on your computer
-* Screen resolution or Spotify layout changes may affect automation
-* The application was developed for personal productivity and Python learning purposes
+Screen resolution or Spotify layout changes may affect the automation.
 
-## Future Improvements
+---
 
-* Improve search reliability
-* Add Spotify Web support
-* Replace fixed mouse coordinates with smarter detection
-* Better interface styling
-
-## Author
-
-Developed by Marina Kally as a Python automation practice project.
+Made with Python ☕
