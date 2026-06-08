@@ -1,20 +1,28 @@
 import pyautogui
 import time
 
+
 pyautogui.PAUSE = 0.5
 
-# Abrir o spotify
-pyautogui.press("win") # clicar com o mouse
-pyautogui.write("spotify")
-pyautogui.press("enter")
 
-time.sleep(6)
+def tocar_musica(musica):
+    # Abrir o Spotify
+    pyautogui.press("win")
+    pyautogui.write("spotify")
+    pyautogui.press("enter")
 
-pyautogui.hotkey('ctrl', 'l')
-pyautogui.write("marina sena - desmitificar")
+    time.sleep(6)
 
-time.sleep(3)
-pyautogui.press("enter")
+    # Ir para pesquisa
+    pyautogui.hotkey('ctrl', 'l')
 
-time.sleep(3)
-pyautogui.click(x=1055, y=319)
+    # Digitar a música escolhida
+    pyautogui.write(musica)
+
+    time.sleep(3)
+    pyautogui.press("enter")
+
+    time.sleep(3)
+
+    # Clicar no play
+    pyautogui.click(x=1055, y=319)
