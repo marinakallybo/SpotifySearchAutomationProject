@@ -11,7 +11,7 @@ def tocar_musica(musica):
     pyautogui.write("spotify")
     pyautogui.press("enter")
 
-    time.sleep(6)
+    time.sleep(4.5)
 
     # Ir para pesquisa
     pyautogui.hotkey('ctrl', 'l')
@@ -19,10 +19,10 @@ def tocar_musica(musica):
     # Digitar a música escolhida
     pyautogui.write(musica)
 
-    time.sleep(3)
+    time.sleep(1.5)
     pyautogui.press("enter")
 
-    time.sleep(3)
+    time.sleep(1.2)
 
     # Clicar no play
     pyautogui.click(x=1151, y=269)

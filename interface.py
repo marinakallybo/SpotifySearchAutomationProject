@@ -22,7 +22,7 @@ def main():
     titulo = customtkinter.CTkLabel(
         janela,
         text="Escolha sua música",
-        font=("Arial", 18, "bold")
+        font=("Times New Roman", 20, "bold")
     )
     titulo.pack(pady=20)
 
@@ -31,14 +31,14 @@ def main():
         placeholder_text="Digite o nome da música",
         width=250
     )
-    entrada_musica.pack(pady=10)
+    entrada_musica.pack(pady=20)
 
     botao = customtkinter.CTkButton(
         janela,
         text="Tocar Música",
         command=buscar_musica
     )
-    botao.pack(pady=10)
+    botao.pack(pady=20)
 
     janela.mainloop()
 
