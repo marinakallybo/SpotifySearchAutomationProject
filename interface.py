@@ -3,42 +3,70 @@ from main import tocar_musica
 
 
 def buscar_musica():
-    musica = entrada_musica.get()
+    musica = entrada_musica.get().strip()
 
-    if musica.strip():  # evita campo vazio
+    if musica:
         tocar_musica(musica)
 
 
 def main():
     global entrada_musica
 
-    customtkinter.set_appearance_mode("System")
-    customtkinter.set_default_color_theme("blue")
+    customtkinter.set_appearance_mode("dark")
+    customtkinter.set_default_color_theme("green")
 
     janela = customtkinter.CTk()
-    janela.geometry("400x250")
+    janela.geometry("500x400")
     janela.title("Spotify Automation")
+    janela.resizable(False, False)
+
+    frame = customtkinter.CTkFrame(
+        janela,
+        corner_radius=20
+    )
+    frame.pack(
+        padx=30,
+        pady=30,
+        fill="both",
+        expand=True
+    )
 
     titulo = customtkinter.CTkLabel(
-        janela,
-        text="Escolha sua música",
-        font=("Times New Roman", 20, "bold")
+        frame,
+        text="🎵 Spotify Search",
+        font=("Poppins", 28, "bold")
     )
-    titulo.pack(pady=20)
+    titulo.pack(pady=(25, 10))
+
+    subtitulo = customtkinter.CTkLabel(
+        frame,
+        text="Type the song you want to play",
+        font=("Poppins", 14)
+    )
+    subtitulo.pack(pady=(0, 20))
 
     entrada_musica = customtkinter.CTkEntry(
-        janela,
-        placeholder_text="Digite o nome da música",
-        width=250
+        frame,
+        placeholder_text="Ex: Marina Sena - Desmitificar",
+        width=320,
+        height=40,
+        corner_radius=12,
+        font=("Poppins", 14)
     )
-    entrada_musica.pack(pady=20)
+    entrada_musica.pack(pady=10)
 
     botao = customtkinter.CTkButton(
-        janela,
-        text="Tocar Música",
-        command=buscar_musica
+        frame,
+        text="Play Music",
+        command=buscar_musica,
+        width=180,
+        height=40,
+        corner_radius=12,
+        font=("Poppins", 15, "bold")
     )
     botao.pack(pady=20)
+
+    janela.bind("<Return>", lambda event: buscar_musica())
 
     janela.mainloop()
 

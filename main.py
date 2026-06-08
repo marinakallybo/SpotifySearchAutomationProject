@@ -5,6 +5,17 @@ import time
 pyautogui.PAUSE = 0.5
 
 
+def clique_proporcional(x_base, y_base, largura_base=1920, altura_base=1080):
+
+    # resolução atual do usuário
+    largura_tela, altura_tela = pyautogui.size()
+
+    # converter proporcionalmente
+    x_real = int((x_base / largura_base) * largura_tela)
+    y_real = int((y_base / altura_base) * altura_tela)
+
+    pyautogui.click(x=x_real, y=y_real)
+    
 def tocar_musica(musica):
     # Abrir o Spotify
     pyautogui.press("win")
@@ -25,4 +36,4 @@ def tocar_musica(musica):
     time.sleep(1.2)
 
     # Clicar no play
-    pyautogui.click(x=1151, y=269)
+    clique_proporcional(1055, 319)
